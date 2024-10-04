@@ -6,7 +6,10 @@ interface User {
 }
 
 const UsersPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+    next: { revalidate: 1 }
+    // revalidate: next have bulit in cache to refresh the data after period of time we can use revalidate and set the number in seconds or we can use { cache: 'no-store'}
+  });
   const users: User[] = await res.json();
 
   return (
