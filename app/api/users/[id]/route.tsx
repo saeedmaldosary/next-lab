@@ -21,9 +21,20 @@ export async function PUT(request: NextRequest, { params: { id } }: Props) {
   if (id > 10) {
     return NextResponse.json({ error: "User is not found" }, { status: 404 });
   }
-  if (!id) {
+  if (!body.name) {
     return NextResponse.json({ error: "Name is required" }, { status: 400 });
   }
 
   return NextResponse.json({ id: 1, name: body.name });
+}
+
+export async function DELETE(request: NextRequest, { params: { id } }: Props) {
+  if (id > 10) {
+    return NextResponse.json({ error: "User is not found" }, { status: 404 });
+  }
+  if (!id) {
+    return NextResponse.json({ error: "ID is required" }, { status: 400 });
+  }
+
+  return NextResponse.json({});
 }
