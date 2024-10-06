@@ -1,5 +1,4 @@
 "use client";
-import { log } from "console";
 import React from "react";
 
 interface Props {
