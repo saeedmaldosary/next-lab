@@ -11,7 +11,14 @@ const NavBar = () => {
       <Link href="/users">Users</Link>
       {/* Below path is from Next auth (not exist in api folder) */}
       {status === "loading" && <div>Loading...</div>}
-      {status === "authenticated" && <div>{session.user?.name}</div>}
+      {status === "authenticated" && (
+        <div>
+          {session.user?.name}
+          <Link className="ml-3" href="/api/auth/signout">
+            Signout
+          </Link>
+        </div>
+      )}
       {status === "unauthenticated" && (
         <Link href="/api/auth/signin">Signin</Link>
       )}
