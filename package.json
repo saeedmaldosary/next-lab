@@ -7,11 +7,13 @@
     "dev3005": "next dev -p 3005",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview-email": "email dev -p 3030"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.0",
     "@prisma/client": "^5.20.0",
+    "@react-email/components": "^0.0.27",
     "@types/node": "22.7.4",
     "@types/react": "18.3.10",
     "@types/react-dom": "18.3.0",
@@ -27,6 +29,8 @@
     "prisma": "^5.20.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-email": "^3.0.2",
+    "resend": "^1.0.0",
     "tailwindcss": "3.4.13",
     "typescript": "5.6.2",
     "zod": "^3.23.8"
